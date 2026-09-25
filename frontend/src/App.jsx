@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://35.153.9.123";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://35.153.9.123/api";
 // const API_BASE_URL = "http://localhost:3000"; // Descomenta esta línea para desarrollo local
 
 async function solicitarAPI(endpoint, opciones) {

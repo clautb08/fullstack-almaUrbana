@@ -10,7 +10,7 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage"
-  },
+},
   "dependencies": {
     "@vitejs/plugin-react": "latest",
     "react": "latest",

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://35.153.9.123";
 
 async function solicitarAPI(endpoint, opciones) {
     const respuesta = await fetch(`${API_BASE_URL}${endpoint}`, {
@@ -128,7 +128,7 @@ function FormularioRegistro({ navegar }) {
         }
     }
 
-    return <section className="form-page wide"><p className="eyebrow">Únete a la comunidad</p><h1>Crear cuenta</h1>{error && <p className="notice" role="alert">{error}</p>}<form onSubmit={registrar}><div className="form-columns"><label>Nombre<input name="name" required placeholder="Claudia" /></label><label>Apellidos<input name="apellidos" required placeholder="Torres Braul" /></label><label>Teléfono<input required type="tel" placeholder="987654321" /></label><label>Fecha de nacimiento<input required type="date" /></label><label>Correo electrónico<input name="email" required type="email" placeholder="ejemplo@gmail.com" /></label><label>Contraseña<input name="password" required minLength="8" type="password" placeholder="Mínimo 8 caracteres" /></label></div><button disabled={cargando}>{cargando ? "Creando cuenta..." : "Crear cuenta"}</button></form></section>;
+    return <section className="form-page wide"><p className="eyebrow">Únete a la comunidad</p><h1>Crear cuenta</h1>{error && <p className="notice" role="alert">{error}</p>}<form onSubmit={registrar}><div className="form-columns"><label>Nombre<input name="name" required placeholder="Alanis" /></label><label>Apellidos<input name="apellidos" required placeholder="Quispe Alva" /></label><label>Teléfono<input required type="tel" placeholder="987654321" /></label><label>Fecha de nacimiento<input required type="date" /></label><label>Correo electrónico<input name="email" required type="email" placeholder="ejemplo@gmail.com" /></label><label>Contraseña<input name="password" required minLength="8" type="password" placeholder="Mínimo 8 caracteres" /></label></div><button disabled={cargando}>{cargando ? "Creando cuenta..." : "Crear cuenta"}</button></form></section>;
 }
 function Checkout({ total, unidades, navegar }) { return <section className="form-page wide"><p className="eyebrow">Último paso</p><h1>Finalizar pedido</h1><div className="checkout-total"><span>{unidades} producto(s)</span><strong>S/. {total.toFixed(2)}</strong></div><form onSubmit={(event) => { event.preventDefault(); alert("Pedido registrado correctamente"); navegar("catalogo"); }}><div className="form-columns"><label>Nombre<input required /></label><label>Apellido<input required /></label><label>Correo electrónico<input required type="email" /></label><label>Teléfono<input required type="tel" /></label><label className="full">Dirección<input required /></label><label>Distrito<input required /></label><label>Referencia<input required /></label><label className="full">Número de tarjeta<input required inputMode="numeric" minLength="16" maxLength="16" /></label></div><button>Confirmar pedido</button></form></section>; }
 
